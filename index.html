@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Password Prescription</title>
+    
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/zxcvbn/4.4.2/zxcvbn.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+    <h2>Resilience Analyzer</h2>
+    <p class="subtitle">Check your password strength</p>
+    
+    <!-- Original Password Input -->
+    <div class="input-group">
+        <input type="password" id="passwordInput" placeholder="Type your password here...">
+        <span class="toggle-password" id="togglePassword">
+            <i class="fa-regular fa-eye" id="eyeIcon"></i>
+        </span>
+    </div>
+    
+    <div class="meter-container">
+        <div class="meter-fill" id="meterFill"></div>
+    </div>
+    
+    <div class="info-group">
+        <div class="info-text" id="strengthText">Strength: None</div>
+        <div class="info-text" id="crackTimeText">Time to crack: Instant</div>
+    </div>
+    
+    <div class="divider">
+        <span>or generate password</span>
+    </div>
+    
+    <!-- Option 1: Generate Random Strong Password -->
+    <div class="generator-section">
+        <button id="generateRandomBtn" class="generate-btn">
+            <i class="fa-solid fa-wand-magic-sparkles"></i> Generate Random Password
+        </button>
+    </div>
+    
+    <!-- Option 2: Generate Password from Custom Word -->
+    <div class="input-group">
+        <input type="text" id="customWordInput" placeholder="Enter a word..." maxlength="9">
+        <span class="toggle-password" id="generateFromWordBtn" style="position: static; transform: none; display: inline-flex; align-items: center; margin-left: 10px;">
+            <i class="fa-solid fa-key"></i>
+        </span>
+    </div>
+    
+    <div class="educational-popup" id="eduPopup"></div>
+    <div class="breach-alert" id="breachAlert"></div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
