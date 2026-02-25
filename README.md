@@ -1,6 +1,6 @@
 # Resilience Analyzer
 
-*A Password Security Assessment Tool* built for **Cyber Carnival 2026**.
+*A Password Security Assessment Tool* built for Hackathon **Cyber Carnival 2026**.
 
 ## 👥 Team: InfoSec Innovators (Batch 2025)
 * **Pranshu Agarwal** (25BAI11526)
